@@ -28,8 +28,8 @@ export default function EmployeeSearch(props){
     return (
         <div className={"banner"}>
             <div className={"banner-txt"}>Employee Explorer</div>
-            <div style={{padding:"60px 300px"}}>
-                <InputGroup style={{height:"45px"}}>
+            <div className={"input-container"}>
+                <InputGroup style={{height:"45px",maxWidth:"450px"}}>
                     <Input  placeholder="Employee Name" style={{height:"45px"}} value={empName} 
                     onChange={updateEmpName}
                     onKeyDown={keyDownText}

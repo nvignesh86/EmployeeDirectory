@@ -67,10 +67,11 @@
     width:27px;
     font-size: 35px;
 }
-.emp-tree{
-    padding-left: 450px;
+.emp-tree{    
     padding-top: 20px;
     min-height: 400px;
+    display: flex;
+    justify-content: center;
 }
 .emp-name{    
     background-color: #1c42ff;
@@ -89,4 +90,10 @@
     padding-left: 80px;
     font-weight: bold;
     color: red;
+}
+.input-container{
+    padding:60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
