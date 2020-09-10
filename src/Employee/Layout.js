@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from './Header';
-//import banner from './../Images/banner.jpg';
 import EmployeeSearch from './EmployeeSearch';
 import EmployeeOverview from './EmployeeOverview';
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -14,7 +13,6 @@ function Layout(props){
                         <Route exact  path="/"component={EmployeeSearch} />                     
                         <Route exact  path="/overview/:empName" component={EmployeeOverview} />                                             
                     </Switch>            
-                {/*<img src={banner} style={{height:"300px",width:"100%"}} />*/}                
             </>
 }
 export default withRouter(Layout)
