@@ -38,7 +38,7 @@ export default function EmployeeSearch(props){
                         <InputGroupText style={{backgroundColor:"#1c42ff",color:"#f3f3f3",cursor:'pointer'}} onClick={searchBtnClick}>Search</InputGroupText>
                     </InputGroupAddon>
                 </InputGroup>
-                <div style={{color:"#b51b1b",display:isError?"block":"none",fontWeight: "bold"}}>Please enter the employee name</div>
+                {isError&&<div className={"err-msg"}>Please enter the employee name</div>}
             </div>      
             </div>
             );

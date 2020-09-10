@@ -97,3 +97,7 @@
     flex-direction: column;
     align-items: center;
 }
+.err-msg{
+    color:#b51b1b;
+    font-weight:bold;
+}

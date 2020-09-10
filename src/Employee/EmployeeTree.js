@@ -24,6 +24,10 @@ export default function EmployeeTree(props){
         }    
     };
 
+    const renderSubordinates=()=>{        
+        ReactDOM.render(<Subordinates subordinates = {empTreeData.subordinates} />,empTreeRoot.current);        
+    }
+
     const getSubordinate =(empData)=>{        
         let url = Constants.GET_EMPLOYEE_SUBORDINATES+empData.name;       
             fetch(url)
@@ -37,7 +41,7 @@ export default function EmployeeTree(props){
                                 getSubordinate(empD);
                             });
                         }                    
-                        ReactDOM.render(<Subordinates subordinates = {empTreeData.subordinates} />,empTreeRoot.current);
+                        renderSubordinates();
                     }else{                    
                         setEmptyMsg(empData.name+" is not valid employee");                              
                     }                                
@@ -51,6 +55,8 @@ export default function EmployeeTree(props){
         getSubordinate(empTreeData);            
     });
 
-    return <div ref={empTreeRoot}>{emptyMsg}</div>
+return <div ref={empTreeRoot}>
+            {emptyMsg&&<div className={"err-msg"}>{emptyMsg}</div>}            
+        </div>
 
 }
